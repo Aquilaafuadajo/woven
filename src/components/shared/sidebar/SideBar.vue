@@ -8,8 +8,18 @@
       </div>
     </div>
     <ul class="flex flex-col">
-      <SideBarItem to="/" label="Get Started" :iconComponent="GlobeIcon" />
-      <SideBarItem to="/dashboard" label="Dashboard" :iconComponent="FourSquaresIcon" />
+      <SideBarItem
+        @onLinkClick="$emit('onLinkClick')"
+        to="/"
+        label="Get Started"
+        :iconComponent="GlobeIcon"
+      />
+      <SideBarItem
+        @onLinkClick="$emit('onLinkClick')"
+        to="/dashboard"
+        label="Dashboard"
+        :iconComponent="FourSquaresIcon"
+      />
     </ul>
     <div v-for="(item, idx) in sidebarConfig" :key="idx">
       <p class="ml-4 mt-8 mb-6 capitalize text-xs font-black text-black-300">{{ item.title }}</p>
@@ -20,12 +30,23 @@
           :to="group.path"
           :label="group.title"
           :iconComponent="group.icon"
+          @onLinkClick="$emit('onLinkClick')"
         />
       </ul>
     </div>
     <ul class="flex flex-col mt-14">
-      <SideBarItem to="/settings" label="Settings" :iconComponent="SettingsIcon" />
-      <SideBarItem to="/logout" label="Log Out" :iconComponent="LogOutIcon" />
+      <SideBarItem
+        @onLinkClick="$emit('onLinkClick')"
+        to="/settings"
+        label="Settings"
+        :iconComponent="SettingsIcon"
+      />
+      <SideBarItem
+        @onLinkClick="$emit('onLinkClick')"
+        to="/logout"
+        label="Log Out"
+        :iconComponent="LogOutIcon"
+      />
     </ul>
   </nav>
 </template>
@@ -38,6 +59,8 @@ import SettingsIcon from '@/assets/icons/SettingsIcon.vue'
 import LogOutIcon from '@/assets/icons/LogOutIcon.vue'
 import SideBarItem from './SideBarItem.vue'
 import { sidebarConfig } from './sidebarConfig.ts'
+
+defineEmits(['onLinkClick'])
 </script>
 
 <style scoped>

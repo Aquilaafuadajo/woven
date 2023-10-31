@@ -1,6 +1,6 @@
 <template>
   <main class="w-full flex">
-    <section class="z-50 absolute lg:relative hidden lg:block drop-shadow-md lg:filter-none">
+    <section class="hidden lg:block">
       <SideBar />
     </section>
     <section class="flex flex-col flex-1 h-screen overflow-y-scroll">

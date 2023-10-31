@@ -3,7 +3,12 @@
     <li class="mb-6 sidebar-item">
       <a
         :href="href"
-        @click="navigate"
+        @click="
+          (e) => {
+            navigate(e)
+            $emit('onLinkClick')
+          }
+        "
         :class="[
           'flex items-center border-l-4 border-b-2 border-t-2 border-r-2 rounded border-transparent sidebar-item text-black-500 font-medium text-xs pl-3',
           isActive && 'router-link-active',
@@ -34,6 +39,7 @@ const { to, label, iconComponent } = defineProps({
     required: true
   }
 })
+defineEmits(['onLinkClick'])
 </script>
 
 <style scoped>
