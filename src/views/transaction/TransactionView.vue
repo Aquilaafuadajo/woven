@@ -9,7 +9,7 @@
         <p class="text-sm font-medium text-black-700 mb-6">Type: Payout</p>
         <div class="flex flex-col md:flex-row">
           <TrasactionReceipt />
-          <TransactionLogs />/
+          <TransactionLogs />
         </div>
       </div>
     </template>
