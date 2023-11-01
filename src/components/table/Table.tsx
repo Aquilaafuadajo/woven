@@ -1,22 +1,5 @@
-import type { FunctionalComponent, Element } from 'vue'
-
-type TableHeader = {
-  title?: string
-  render?: () => any
-}
-
-type TableColumn = {
-  dataIndex?: string
-  render?: () => any
-}
-
-type TableConfig = {
-  tableHeaders?: TableHeader[]
-  name?: string
-  onRowClick?: (row: any) => void
-  tableColumns?: any
-  data: any
-}
+import type { FunctionalComponent } from 'vue'
+import { TableConfig } from '@/types/table.type'
 
 export const Table: FunctionalComponent<TableConfig> = (props) => {
   return (

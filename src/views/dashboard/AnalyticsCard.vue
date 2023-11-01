@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col rounded-xl bg-white p-6 w-full min-w-[24rem] analytic-bg">
+  <div class="flex flex-col rounded-xl bg-white p-6 w-full min-w-[24rem] max-w-[28rem] analytic-bg">
     <div class="w-full flex justify-between items-center">
       <p class="text-black-600 text-sm font-medium">Transaction analytics</p>
       <button
@@ -10,9 +10,9 @@
     </div>
     <div class="flex items-center">
       <div class="relative mr-10">
-        <div class="absolute text-center top-[54px] left-[35px]">
+        <div class="absolute text-center top-[54px] left-[32px]">
           <p class="text-xs font-black text-black-900">1260</p>
-          <p class="text-[0.56rem] font-black text-black-900">Transactions</p>
+          <p class="text-[0.625rem] font-black text-black-900">Transactions</p>
         </div>
         <vue3-chart-js v-bind="{ ...doughnutChart }" />
       </div>
@@ -41,9 +41,13 @@ const doughnutChart = {
     datasets: [
       {
         backgroundColor: ['#EB8B1E', '#A63241', '#4BDECA'],
-        data: [13, 23, 93]
+        data: [13, 23, 93],
+        borderWidth: 0
       }
     ]
+  },
+  options: {
+    cutout: '60%'
   }
 }
 </script>

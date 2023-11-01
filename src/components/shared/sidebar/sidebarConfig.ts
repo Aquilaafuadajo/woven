@@ -16,8 +16,9 @@ type SidebarConfig = {
     path: string
     icon: any
     hasMore?: boolean
-  }
-}[]
+  }[]
+}
+
 export const sidebarConfig: SidebarConfig[] = [
   {
     title: 'payments',

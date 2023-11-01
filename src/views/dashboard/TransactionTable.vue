@@ -12,21 +12,21 @@
 
 <script setup lang="tsx">
 import { useRouter } from 'vue-router'
-import { Table } from '@/components/table/Table.tsx'
-import SortIcon from '@/assets/icons/SortIcon.vue'
+import { Table } from '@/components/table/Table'
 import { transactions } from '@/constants/data'
-
-// import {TransactionType} from '@/constants/type'
+import SortIcon from '@/assets/icons/SortIcon.vue'
+import type { TableColumn, TableHeader } from '@/types/table.type'
 
 const router = useRouter()
 
 const onRowClick = () => router.push('/transactions/sldkld')
-const tableHeaders = [
+const tableHeaders: TableHeader[] = [
   { title: 'Customer' },
   { title: 'Amount' },
   { title: 'Reference' },
   { title: 'Channel' },
   {
+    title: 'Status',
     render: () => (
       <p class="flex text-xs text-black-400 font-black capitalize">
         Status <SortIcon class="ml-2" />
@@ -34,6 +34,7 @@ const tableHeaders = [
     )
   },
   {
+    title: 'Type',
     render: () => (
       <p class="flex text-xs text-black-400 font-black capitalize">
         Type <SortIcon class="ml-2" />
@@ -42,7 +43,7 @@ const tableHeaders = [
   },
   { title: 'Payment Date' }
 ]
-const tableColumns = [
+const tableColumns: TableColumn[] = [
   {
     dataIndex: 'user',
     render: (row: any) => (

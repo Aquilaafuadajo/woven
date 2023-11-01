@@ -58,7 +58,7 @@ import FourSquaresIcon from '@/assets/icons/FourSquaresIcon.vue'
 import SettingsIcon from '@/assets/icons/SettingsIcon.vue'
 import LogOutIcon from '@/assets/icons/LogOutIcon.vue'
 import SideBarItem from './SideBarItem.vue'
-import { sidebarConfig } from './sidebarConfig.ts'
+import { sidebarConfig } from './sidebarConfig'
 
 defineEmits(['onLinkClick'])
 </script>

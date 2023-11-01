@@ -10,16 +10,18 @@
 </template>
 
 <script setup lang="tsx">
-import { Table } from '@/components/table/Table.tsx'
+import { Table } from '@/components/table/Table'
 import { customers } from '@/constants/data'
-const tableHeaders = [
+import type { TableColumn, TableHeader } from '@/types/table.type'
+
+const tableHeaders: TableHeader[] = [
   { title: 'Customer' },
   { title: 'Phone' },
   { title: 'Nuban' },
   { title: 'Reference' },
   { title: 'Date Created' }
 ]
-const tableColumns = [
+const tableColumns: TableColumn[] = [
   {
     dataIndex: 'user',
     render: (row: any) => (
