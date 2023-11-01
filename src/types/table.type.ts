@@ -1,6 +1,6 @@
 export type TableHeader = {
   title: string
-  render?: (row: any) => any
+  render?: (row?: any) => any
 }
 
 export type TableColumn = {
@@ -11,7 +11,7 @@ export type TableColumn = {
 export type TableConfig = {
   name?: string
   data: any
-  tableHeaders?: TableHeader[]
-  tableColumns?: TableColumn[]
+  tableHeaders: TableHeader[]
+  tableColumns: TableColumn[]
   onRowClick?: (row: any) => void
 }

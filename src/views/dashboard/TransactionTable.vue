@@ -13,7 +13,7 @@
 <script setup lang="tsx">
 import { useRouter } from 'vue-router'
 import { Table } from '@/components/table/Table'
-import { transactions } from '@/constants/data'
+import { transactions } from '@/constants/transactions'
 import SortIcon from '@/assets/icons/SortIcon.vue'
 import type { TableColumn, TableHeader } from '@/types/table.type'
 

@@ -11,7 +11,7 @@
 
 <script setup lang="tsx">
 import { Table } from '@/components/table/Table'
-import { customers } from '@/constants/data'
+import { customers } from '@/constants/customers'
 import type { TableColumn, TableHeader } from '@/types/table.type'
 
 const tableHeaders: TableHeader[] = [

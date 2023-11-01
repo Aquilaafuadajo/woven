@@ -1,5 +1,5 @@
 import type { FunctionalComponent } from 'vue'
-import { TableConfig } from '@/types/table.type'
+import type { TableConfig } from '@/types/table.type'
 
 export const Table: FunctionalComponent<TableConfig> = (props) => {
   return (
@@ -23,9 +23,9 @@ export const Table: FunctionalComponent<TableConfig> = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.data.map((row, idx) => (
+        {props.data.map((row: any, idx: number) => (
           <tr
-            onClick={(row) => props.onRowClick(row)}
+            onClick={(row) => props.onRowClick?.(row)}
             key={idx}
             class="cursor-pointer hover:opacity-70 last:hover:opacity-100 even:bg-black-50"
           >
